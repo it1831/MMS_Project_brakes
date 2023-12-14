@@ -1,141 +1,194 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-<title>Audio</title>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<style>
+  <title>Audio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <style>
+    .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      background-color: red;
+      color: white;
+      text-align: center;
+    }
 
+    body {
+      font-family: "Lato", sans-serif
+    }
 
-.footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: red;
-  color: white;
-  text-align: center;
-}
-
-body {font-family: "Lato", sans-serif}
-.mySlides {display: none}
-</style>
+    .mySlides {
+      display: none
+    }
+  </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<div class="w3-top">
+  <!-- Navbar -->
+  <div class="w3-top">
     <div class="w3-bar w3-black w3-card">
-      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-      <a href="main.html" class="w3-bar-item w3-button w3-padding-large"><img src="disc.png" style="width: 20px" alt="main page" ></a>
+      <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)"
+        onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="main.html" class="w3-bar-item w3-button w3-padding-large"><img src="disc.png" style="width: 20px"
+          alt="main page"></a>
       <a href="1.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">drum brakes</a>
       <a href="2.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">disc brakes</a>
       <a href="3.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">audio</a>
       <a href="4.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">gif</a>
-      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+      <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i
+          class="fa fa-search"></i></a>
     </div>
   </div>
-  
+
   <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
   <div id="navDemo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-      <a href="1.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"> 1</a>
-      <a href="2.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">2</a>
-      <a href="3.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">3</a>
-      <a href="4.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">4</a>
+    <a href="1.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()"> 1</a>
+    <a href="2.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">2</a>
+    <a href="3.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">3</a>
+    <a href="4.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">4</a>
   </div>
 
-<!-- Page content -->
-<div class="w3-content" style="max-width:2000px;margin-top:46px">
+  <!-- Page content -->
+  <div class="w3-content" style="max-width:2000px;margin-top:46px">
 
-<div class="w3-display-container w3-center">
-    <h1>Jak to teda funguje?</h1>
-<br>
-<br>
-<br>
-<br>
-    <audio controls>
-        <source src="audio/Brakes/Brakes.mp3" type="audio/mpeg">
-      Your browser does not support the audio element.
-    </audio>
-</div>
+    <div class="w3-display-container w3-center">
+      <h1>How does it work?</h1>
+      <br>
+      <br>
+      <br>
+      <br>
 
-<div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
-<p>
-  How do car brakes actualy work? 
-  Most people have no idea, so let's not be like most people and learn about them.
-  Most cars nowadays use hydraulic brakes
-  ofcourse there are more types, for example electric brakes in Electric Vehicles and hybrids but a lot of them still use hydraulic brakes.
-  
-  But how do they work?
-  Let's start from the cockpit of your vehicle.
-  When you press on the brake peddal, it will push on "Brake master cylinder" which will distribute a presure thru brake pipes and lines, 
-  which will put pressure in "Brake calipers" which will push out a cylinder shaped piston that will push into "Brake pads" which will push on "brake discs" which will slow down or stop your car.
-  Depends on how much pressure your foot puts on the pedal.
+    </div>
 
-  Brakes are divided into two categories drum brakes and disc brakes.
-  
-  Drum brakes are older, cheaper and for few decades are used in lower end, smaller and lighter car's rear wheels. Drum brakes are generally less expensive to manufacture and maintain, which can make them a viable option for budget-conscious car manufacturers. However, it is worth noting that the industry is increasingly shifting towards disc brakes due to their superior performance and braking capabilities.
-  
-  Disc brakes are a norm and are a common type of braking system used in vehicles. Their advantages include better stopping power, improved performance in wet conditions, and longer lifespan. They also provide more consistent braking and require less maintenance. However, they tend to be more expensive to manufacture and can be more complex to repair compared to drum brakes. Overall, disc brakes are considered superior in terms of performance and safety, which is why they are commonly used in modern vehicles.
-  </p>
-</div>
-<div>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-</div>
+    <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px">
+      <div>
+        <p>
+          How do car brakes actualy work?
+          Most people have no idea, so let's not be like most people and learn about them.
+          Most cars nowadays use hydraulic brakes
+          ofcourse there are more types, for example electric brakes in Electric Vehicles and hybrids but a lot of them
+          still use hydraulic brakes.
+        </p>
+        <audio controls>
+          <source src="audio/1.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
 
-<!-- End Page Content -->
-</div>
 
-<!-- Footer -->
-<footer class="footer w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+      <div>
+        <p>
+          But how do they work?
+          Let's start from the cockpit of your vehicle.
+          When you press on the brake peddal, it will push on "Brake master cylinder" which will distribute a presure
+          thru brake pipes and lines,
+          which will put pressure in "Brake calipers" which will push out a cylinder shaped piston that will push into
+          "Brake pads" which will push on "brake discs" which will slow down or stop your car.
+          Depends on how much pressure your foot puts on the pedal.
+        </p>
+        <audio controls>
+          <source src="audio/2.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+      <div>
+        <p>
+          Brakes are divided into two categories drum brakes and disc brakes.
 
-<script>
-// Automatic Slideshow - change image every 4 seconds
-var myIndex = 0;
-carousel();
+          Drum brakes are older, cheaper and for few decades are used in lower end, smaller and lighter car's rear
+          wheels.
+          Drum brakes are generally less expensive to manufacture and maintain, which can make them a viable option for
+          budget-conscious car manufacturers. However, it is worth noting that the industry is increasingly shifting
+          towards
+          disc brakes due to their superior performance and braking capabilities.
+        </p>
+        <audio controls>
+          <source src="audio/3.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 4000);    
-}
 
-// Used to toggle the menu on small screens when clicking on the menu button
-function myFunction() {
-  var x = document.getElementById("navDemo");
-  if (x.className.indexOf("w3-show") == -1) {
-    x.className += " w3-show";
-  } else { 
-    x.className = x.className.replace(" w3-show", "");
-  }
-}
+      </div>
 
-// When the user clicks anywhere outside of the modal, close it
-var modal = document.getElementById('ticketModal');
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
-</script>
+      <div>
+        <p>
+
+          Disc brakes are a norm and are a common type of braking system used in vehicles. Their advantages include
+          better
+          stopping power, improved performance in wet conditions, and longer lifespan. They also provide more consistent
+          braking and require less maintenance. However, they tend to be more expensive to manufacture and can be more
+          complex to repair compared to drum brakes. Overall, disc brakes are considered superior in terms of
+          performance
+          and safety, which is why they are commonly used in modern vehicles.
+        </p>
+        <audio controls>
+          <source src="audio/4.mp3" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+    <div>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+    </div>
+
+    <!-- End Page Content -->
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
+    <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+  </footer>
+
+  <script>
+    // Automatic Slideshow - change image every 4 seconds
+    var myIndex = 0;
+    carousel();
+
+    function carousel() {
+      var i;
+      var x = document.getElementsByClassName("mySlides");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      myIndex++;
+      if (myIndex > x.length) { myIndex = 1 }
+      x[myIndex - 1].style.display = "block";
+      setTimeout(carousel, 4000);
+    }
+
+    // Used to toggle the menu on small screens when clicking on the menu button
+    function myFunction() {
+      var x = document.getElementById("navDemo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else {
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    var modal = document.getElementById('ticketModal');
+    window.onclick = function (event) {
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 </body>
+
 </html>
